@@ -1,0 +1,27 @@
+# serverless.yml
+
+service: products-service
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: us-east-1
+  environment:
+    SERVICE_NAME: ${self:service}
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http: GET hello
+
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: 'apiv2.means-business.com' # Change this to your domain.
+    basePath: 'products' # This will be prefixed to all routes
+    stage: ${self:provider.stage}
+    createRoute53Record: true
