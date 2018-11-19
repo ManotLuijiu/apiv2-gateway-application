@@ -20,8 +20,14 @@ plugins:
   - serverless-domain-manager
 
 custom:
+  stage: ${opt:stage, self:provider.stage}
+  domains:
+    prod: apiv2.means-business.com
+    staging: staging-apiv2.means-business.com
+    dev: dev-apiv2.means-business.com
+
   customDomain:
-    domainName: 'apiv2.means-business.com' # Change this to your domain.
-    basePath: 'users' # This will be prefixed to all routes
-    stage: ${self:provider.stage}
+    basePath: ''
+    domainName: ${self:custom.domains.${self:custom.stage}}
+    stage: '${self:custom.stage}'
     createRoute53Record: true
