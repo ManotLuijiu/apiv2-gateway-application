@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/products-service/dev/1542552779026-2018-11-18T14:52:59.026Z/products-service.zip"
+          "S3Key": "serverless/products-service/dev/1542596489529-2018-11-19T03:01:29.529Z/products-service.zip"
         },
         "FunctionName": "products-service-dev-hello",
         "Handler": "handler.hello",
@@ -116,14 +116,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersionM5d32gSJ0LhL7BAJyYMwzL6Z10EhafIE7kfSrXAYneI": {
+    "HelloLambdaVersionuCrmgPCAaC0VdHykRDKSqz0jnjjL6dBNvAdsecKShwg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "E8Gi0EJDpTcsTfqI/NbkSBpvIlOvCyE9rAlbFPJhvtI="
+        "CodeSha256": "ZCFb3vk7WsT5nSFy5/hMFz24NZoKJlLyxPB2TNoAKcI="
       }
     },
     "ApiGatewayRestApi": {
@@ -195,7 +195,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1542552779039": {
+    "ApiGatewayDeployment1542596489598": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -264,7 +264,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionM5d32gSJ0LhL7BAJyYMwzL6Z10EhafIE7kfSrXAYneI"
+        "Ref": "HelloLambdaVersionuCrmgPCAaC0VdHykRDKSqz0jnjjL6dBNvAdsecKShwg"
       }
     },
     "ServiceEndpoint": {

@@ -109,7 +109,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/users-service/dev/1542552384680-2018-11-18T14:46:24.680Z/users-service.zip"
+                "S3Key": "serverless/users-service/dev/1542596886161-2018-11-19T03:08:06.161Z/users-service.zip"
               },
               "FunctionName": "users-service-dev-hello",
               "Handler": "handler.hello",
@@ -133,14 +133,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionmxAiIh6Ent60R6rVmBEjFYmTjT4rZv2vxG672pSnwSc": {
+          "HelloLambdaVersionzr9GCL0u1Qumdr7wflWWixO0o2FJSiS4pB9xFYV7C1A": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "E8Gi0EJDpTcsTfqI/NbkSBpvIlOvCyE9rAlbFPJhvtI="
+              "CodeSha256": "HfPvilK0yZvOSc34mBJIuG4EzjCXNdy6HAcZ+D9guqU="
             }
           },
           "ApiGatewayRestApi": {
@@ -212,7 +212,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1542552384696": {
+          "ApiGatewayDeployment1542596886218": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -281,7 +281,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionmxAiIh6Ent60R6rVmBEjFYmTjT4rZv2vxG672pSnwSc"
+              "Ref": "HelloLambdaVersionzr9GCL0u1Qumdr7wflWWixO0o2FJSiS4pB9xFYV7C1A"
             }
           },
           "ServiceEndpoint": {
@@ -323,6 +323,17 @@
       },
       "vpc": {}
     },
+    "custom": {
+      "customDomain": {
+        "domainName": "apiv2.means-business.com",
+        "basePath": "users",
+        "stage": "dev",
+        "createRoute53Record": true
+      }
+    },
+    "plugins": [
+      "serverless-domain-manager"
+    ],
     "pluginsData": {},
     "functions": {
       "hello": {
@@ -340,10 +351,10 @@
         "vpc": {}
       }
     },
-    "artifact": "/mnt/c/Dev/api-gateway-application/users-service/.serverless/users-service.zip"
+    "artifact": "/mnt/d/Dev/NextJS-MB-Web/apiv2-gateway-application/users-service/.serverless/users-service.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/users-service/dev/1542552384680-2018-11-18T14:46:24.680Z",
+    "artifactDirectoryName": "serverless/users-service/dev/1542596886161-2018-11-19T03:08:06.161Z",
     "artifact": "users-service.zip"
   }
 }
